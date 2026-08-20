@@ -1,50 +1,45 @@
-# Compiled class file
+```
+# Compiled and build artifacts
 *.class
+*.o
+*.obj
+*.out
+build/
+target/
 
-# Log file
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.gradle/
+
+# Logs and temp files
 *.log
+*.tmp
+*.swp
 
-# BlueJ files
-*.ctxt
+# Environment
+.env
+.env.local
+*.env.*
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Editors
+.vscode/
+.idea/
 
-# Package Files #
-*.war
-*.nar
-*.ear
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-# web
-dist/
-
-## IDEA configs
-
-*.iml
-/idea/
-
-
-## Mac OS
+# System files
 .DS_Store
+Thumbs.db
 
-## tests
-server/test/io.cloudbeaver.test.platform/workspace/.data/
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-## Eclipse configs
-
-.project
-.classpath
-.settings/
-
-## Eclipse PDE
-*.product.launch
-
-workspace-dev-ce/
-deploy/cloudbeaver
-server/**/target
-apps/**/target
-osgi-cache/
+# OSGi specific
+META-INF/
+OSGI-INF/
+```
