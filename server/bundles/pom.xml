@@ -30,6 +30,7 @@
 
         <module>io.cloudbeaver.service.security</module>
         <module>io.cloudbeaver.service.ldap.auth</module>
+        <module>io.cloudbeaver.service.oidc.auth</module>
 
         <module>io.cloudbeaver.resources.drivers.base</module>
 

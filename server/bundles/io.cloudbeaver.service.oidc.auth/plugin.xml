@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<plugin>
+    <extension point="org.jkiss.dbeaver.auth.provider">
+        <authProvider id="oidc" label="OIDC" description="OpenID Connect authentication provider"
+            configurable="true"
+            class="io.cloudbeaver.service.oidc.auth.OidcAuthProvider"
+            icon="platform:/plugin/org.jkiss.dbeaver.model/icons/idp/oidc.svg">
+            <configuration>
+                <propertyGroup label="OIDC" description="OpenID Connect authentication">
+                    <property id="oidc-issuer-url" label="%oidc-issuer-url" type="string" description="%oidc-issuer-url.description" required="true"/>
+                    <property id="oidc-client-id" label="%oidc-client-id" type="string" description="%oidc-client-id.description" required="true"/>
+                    <property id="oidc-client-secret" label="%oidc-client-secret" type="string" description="%oidc-client-secret.description" features="password" required="true"/>
+                    <property id="oidc-scope" label="%oidc-scope" type="string" defaultValue="openid profile email" description="%oidc-scope.description" required="false"/>
+                    <property id="oidc-redirect-uri" label="%oidc-redirect-uri" type="string" description="%oidc-redirect-uri.description" required="true"/>
+                    <property id="oidc-groups-claim" label="%oidc-groups-claim" type="string" defaultValue="groups" description="%oidc-groups-claim.description" required="false"/>
+                    <property id="oidc-username-claim" label="%oidc-username-claim" type="string" defaultValue="preferred_username" description="%oidc-username-claim.description" required="false"/>
+                    <property id="oidc-name-claim" label="%oidc-name-claim" type="string" defaultValue="name" description="%oidc-name-claim.description" required="false"/>
+                    <property id="oidc-logout-url" label="%oidc-logout-url" type="string" description="%oidc-logout-url.description" required="false"/>
+                </propertyGroup>
+            </configuration>
+            <credentials>
+                <propertyGroup label="Auth credentials">
+                    <property id="access_token" label="Access Token" type="string" description="OIDC access token" identifying="true"/>
+                    <property id="user_name" label="User Name" type="string" description="User name from OIDC" user="true"/>
+                    <property id="user_email" label="User Email" type="string" description="User email from OIDC" user="true"/>
+                    <property id="user_groups" label="User Groups" type="string" description="User groups from OIDC" encryption="plain"/>
+                </propertyGroup>
+            </credentials>
+
+            <metaParameters type="team">
+                <propertyGroup label="OIDC group name">
+                    <property id="oidc.group-name" label="OIDC Group name" type="string"
+                              description="OIDC group name."/>
+                </propertyGroup>
+            </metaParameters>
+        </authProvider>
+    </extension>
+</plugin>

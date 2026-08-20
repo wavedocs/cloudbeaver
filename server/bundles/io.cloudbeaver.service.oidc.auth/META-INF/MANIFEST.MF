@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cloudbeaver Web Service - OIDC Auth
+Bundle-Vendor: DBeaver Corp
+Bundle-SymbolicName: io.cloudbeaver.service.oidc.auth;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Release-Date: 20260817
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.jkiss.dbeaver.model;visibility:=reexport,
+ org.jkiss.dbeaver.registry;visibility:=reexport,
+ io.cloudbeaver.model,
+ com.google.gson
+Bundle-Localization: OSGI-INF/l10n/bundle
+Export-Package: io.cloudbeaver.service.oidc.auth
+Automatic-Module-Name: io.cloudbeaver.service.oidc.auth
